@@ -6,7 +6,7 @@ function removeTitleAndCalcDays() {
   title.addEventListener("click", () => {
     title.style.display = "none";
     calc_input.style.display = "flex";
-    calc_input.style.margin = "20rem auto";
+    calc_input.style.margin = "16rem auto";
     dayes.style.display = "flex";
     icons.style.display = "flex";
     calc_input.addEventListener("change", function () {

@@ -29,36 +29,28 @@ body {
 }
 
 section {
-  height: 50vh;
+  max-height: 100vh;
 }
 
-.links{
-    position: fixed;
-    bottom: 18px;
-    display: none;
-    left: 50%;
-    transform: translate(-50%);
-    list-style: none;
+.links {
+  position: fixed;
+  bottom: 18px;
+  display: none;
+  left: 50%;
+  transform: translate(-50%);
+  list-style: none;
 }
-.links i{
-    font-size: 2rem;
-    margin: 1.1rem;
-    cursor: pointer;
+.links i {
+  font-size: 2rem;
+  margin: 1.1rem;
+  cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
 
 h1 {
   height: 8rem;
-  width: 42rem;
+  width: 85%;
+  font-family: sans-serif;
+  letter-spacing: 3px;
   background-image: radial-gradient(
     circle,
     #d16ba5,
@@ -92,8 +84,6 @@ h1:hover {
   width: 48rem;
   margin: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 21rem;
   border: none;
   outline: none;
@@ -114,12 +104,38 @@ h1:hover {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  font-family: cursive;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 7px;
+  }
+  * {
+    overflow: hidden;
+  }
+  .links {
+    position: fixed;
+    bottom: 118px;
+    display: none;
+    flex-direction: column;
+    left: 5rem;
+    transform: translate(-50%);
+    list-style: none;
+  }
+  .calc_input[type="number"] {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
   html {
     font-size: 8px;
+  }
+  * {
+    overflow: hidden;
+  }
+  .calc_input[type="number"] {
+    font-size: 15px;
   }
 }
 
