@@ -27,9 +27,35 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100vh;
 }
+
 section {
   height: 50vh;
 }
+
+.links{
+    position: fixed;
+    bottom: 18px;
+    display: none;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+}
+.links i{
+    font-size: 2rem;
+    margin: 1.1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 h1 {
   height: 8rem;
   width: 42rem;
