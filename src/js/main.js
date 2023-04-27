@@ -3,19 +3,21 @@ function removeTitleAndCalcDays() {
   let calc_input = document.querySelector(".calc_input");
   let dayes = document.querySelector(".dayes");
   let icons = document.querySelector(".links");
+  let input_color = document.querySelector(".color");
   title.addEventListener("click", () => {
     title.style.display = "none";
     calc_input.style.display = "flex";
     calc_input.style.margin = "16rem auto";
     dayes.style.display = "flex";
     icons.style.display = "flex";
+
     calc_input.addEventListener("change", function () {
       calc_age = calc_input.value * 365;
       dayes.innerHTML = `Your Days old is: ${calc_age} `;
       let speech = new SpeechSynthesisUtterance(calc_age);
-      speechSynthesis.speak(speech)
+      speechSynthesis.speak(speech);
 
-      if (calc_age <= "-365") {
+      if (calc_age <= "-1") {
         alert(
           "Well, you're not even born yet😂🤣🤰, Try writing the age of someone who's here with us"
         );
@@ -31,6 +33,7 @@ function icons() {
   let twitter_icon = document.querySelector(".links :nth-child(2)");
   let github_icon = document.querySelector(".links :nth-child(3)");
   let linkedin_icon = document.querySelector(".links :nth-child(4)");
+    let instagram_icon = document.querySelector(".links :nth-child(5)");
   facebook_icon.onclick = function () {
     window.open("https://www.facebook.com/hamdy.elgokar.5");
   };
@@ -43,6 +46,9 @@ function icons() {
   linkedin_icon.onclick = function () {
     window.open("https://www.linkedin.com/in/hamdy-abdal-majeed-b67b32246/");
   };
+  instagram_icon.onclick = function(){
+    window.open("https://instagram.com/askander_19?igshid=ZDdkNTZiNTM=")
+  }
 }
 
 icons();
