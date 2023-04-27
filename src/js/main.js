@@ -12,6 +12,8 @@ function removeTitleAndCalcDays() {
     calc_input.addEventListener("change", function () {
       calc_age = calc_input.value * 365;
       dayes.innerHTML = `Your Days old is: ${calc_age} `;
+      let speech = new SpeechSynthesisUtterance(calc_age);
+      speechSynthesis.speak(speech)
 
       if (calc_age <= "-365") {
         alert(
